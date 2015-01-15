@@ -3,9 +3,9 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.kevoree</groupId>
-    <artifactId>registry-model</artifactId>
-    <name>Kevoree :: Registry :: Model</name>
-    <version>5.2.2</version>
+    <artifactId>model-java</artifactId>
+    <name>Kevoree :: Model :: Java</name>
+    <version>5.2.2-SNAPSHOT</version>
 
     <properties>
         <kevoree.version>5.2.2</kevoree.version>
@@ -24,12 +24,6 @@
             <groupId>org.kevoree.modeling</groupId>
             <artifactId>org.kevoree.modeling.microframework</artifactId>
             <version>${kmf.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>${project.artifactId}</artifactId>
-            <version>${project.version}</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
