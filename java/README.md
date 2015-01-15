@@ -6,6 +6,5 @@ Just run this command:
 mvn install
 ```
 
-It will retrieve the specified Kevoree meta-model version (pom.xml - ${kevoree.version}) from
-`org.kevoree:org.kevoree.model:${kevoree.version}`.
-Then **KMF** will use this meta-model file in order to generate the Java model.
+> It will retrieve the specified Kevoree meta-model version from `org.kevoree:org.kevoree.model:${kevoree.version}`.  
+> Then **KMF** will use this meta-model file in order to generate the Java model.
