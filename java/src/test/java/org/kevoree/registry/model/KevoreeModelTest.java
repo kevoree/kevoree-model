@@ -9,6 +9,8 @@ import org.kevoree.ContainerNode;
 import org.kevoree.ContainerRoot;
 import org.kevoree.modeling.api.data.MemoryKDataBase;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 /**
  *
  * Created by leiko on 14/01/15.
@@ -31,15 +33,20 @@ public class KevoreeModelTest {
         KevoreeView view0 = dimension.time(0L);
         ContainerRoot root = view0.createContainerRoot();
         view0.setRoot(root, null);
+
+        assertThat(root).isNotNull();
     }
 
     @Test
     public void createContainerNode() {
-        KevoreeView view = dimension.time(1L);
+        KevoreeView view = dimension.time(0L);
         ContainerRoot root = view.createContainerRoot();
         view.setRoot(root, null);
         ContainerNode node = view.createContainerNode();
         root.addNodes(node);
-        view.json().save(root, (model, err) -> System.out.println(model));
+
+        assertThat(root.sizeOfNodes()).isEqualTo(1);
     }
+
+    // TODO: more tests!
 }
